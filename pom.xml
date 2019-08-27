@@ -15,6 +15,16 @@
 
     <!-- Additional lines to be added here... -->
     <modules>
-    <module>server</module>
+        <module>server</module>
+        <module>metrics-api</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
