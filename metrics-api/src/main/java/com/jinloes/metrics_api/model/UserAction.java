@@ -23,14 +23,21 @@ public class UserAction {
     @Field(type = FieldType.Keyword, store = true)
     private final String orgId;
     @Field(type = FieldType.Keyword, store = true)
+    private final String feature;
+    @Field(type = FieldType.Keyword, store = true)
     private final String action;
+    @Field(type = FieldType.Keyword, store = true)
+    private final String targetId;
 
     @JsonCreator
     public UserAction(@JsonProperty("timestamp") Instant timestamp, @JsonProperty("userId") String userId,
-                      @JsonProperty("orgId") String orgId, @JsonProperty("action") String action) {
+                      @JsonProperty("orgId") String orgId, @JsonProperty("feature") String feature,
+                      @JsonProperty("action") String action, @JsonProperty("targetId") String targetId) {
         this.timestamp = timestamp;
         this.userId = userId;
         this.orgId = orgId;
+        this.feature = feature;
         this.action = action;
+        this.targetId = targetId;
     }
 }

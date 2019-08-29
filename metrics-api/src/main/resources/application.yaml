@@ -8,3 +8,7 @@ management:
   health:
     elasticsearch:
       enabled: false
+  metrics:
+    export:
+      influx:
+        enabled: false
